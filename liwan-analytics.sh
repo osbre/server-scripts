@@ -75,8 +75,14 @@ fi
 
 chown -R "$USERNAME:$USERNAME" "$CONFIG_DIR"
 
-# --- Caddy setup ---
-CADDYFILE="/etc/caddy/Caddyfile"
+# --- Caddyfile for either FrankenPHP or Caddy ---
+if command -v frankenphp >/dev/null; then
+  CADDYFILE=/etc/frankenphp/Caddyfile
+else
+  CADDYFILE=/etc/caddy/Caddyfile
+fi
+
+# Start with an empty or existing file
 touch "$CADDYFILE"
 
 # Add email block if missing
