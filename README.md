@@ -1,5 +1,5 @@
 ```shell
-git clone git@github.com:osbre/server-scripts.git scripts
+git clone https://github.com/osbre/server-scripts.git scripts
 cd scripts
 
 sudo ./unattended-upgrades.sh
