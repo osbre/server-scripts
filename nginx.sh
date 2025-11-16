@@ -16,3 +16,6 @@ echo -e "Package: *\nPin: origin nginx.org\nPin: release o=nginx\nPin-Priority: 
 
 apt update
 apt install nginx -y
+
+systemctl enable nginx
+systemctl start nginx
