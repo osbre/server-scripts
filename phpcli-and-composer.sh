@@ -30,9 +30,8 @@ update-alternatives --set php-config /usr/bin/php-config8.4
 curl -sS https://getcomposer.org/installer | php
 mv composer.phar /usr/local/bin/composer
 
-# Verify PHP and Composer installation
 php -v
 php -m
-composer --version
 
-echo "PHP 8.4 and Composer have been installed successfully!"
+pecl install openswoole
+echo "extension=openswoole.so" >> /etc/php/8.4/cli/php.ini
