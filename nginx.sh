@@ -19,3 +19,5 @@ apt install nginx -y
 
 systemctl enable nginx
 systemctl start nginx
+
+echo "Nginx installed. Use `sudo -u www-data -s` to log in as www-data"
