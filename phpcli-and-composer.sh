@@ -18,13 +18,13 @@ ${SUDO} sh -c 'echo "deb [signed-by=/usr/share/keyrings/debsuryorg-archive-keyri
 ${SUDO} apt-get update
 # end add repository
 
-# Install PHP 8.4 and required extensions for Laravel
-apt install -y unzip php8.4-cli php8.4-mbstring php8.4-xml php8.4-mysql php8.4-curl php8.4-bcmath php8.4-redis php8.4-zip php8.4-soap php8.4-intl php8.4-common php8.4-opcache php8.4-pgsql php8.4-sqlite3 php-pear php8.4-dev g++ make
+# Install PHP 8.5 and required extensions for Laravel
+apt install -y unzip php8.5-cli php8.5-mbstring php8.5-xml php8.5-mysql php8.5-curl php8.5-bcmath php8.5-redis php8.5-zip php8.5-soap php8.5-intl php8.5-common php8.5-opcache php8.5-pgsql php8.5-sqlite3 php-pear php8.5-dev g++ make
 
-# Set PHP 8.4 as default
-update-alternatives --set php /usr/bin/php8.4
-update-alternatives --set phpize /usr/bin/phpize8.4
-update-alternatives --set php-config /usr/bin/php-config8.4
+# Set PHP 8.5 as default
+update-alternatives --set php /usr/bin/php8.5
+update-alternatives --set phpize /usr/bin/phpize8.5
+update-alternatives --set php-config /usr/bin/php-config8.5
 
 # Install Composer globally
 curl -sS https://getcomposer.org/installer | php
@@ -34,4 +34,4 @@ php -v
 php -m
 
 pecl install openswoole
-echo "extension=openswoole.so" >> /etc/php/8.4/cli/php.ini
+echo "extension=openswoole.so" >> /etc/php/8.5/cli/php.ini
