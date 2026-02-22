@@ -19,7 +19,7 @@ ${SUDO} apt-get update
 # end add repository
 
 # Install PHP 8.5 and required extensions for Laravel
-apt install -y unzip php8.5-cli php8.5-mbstring php8.5-xml php8.5-mysql php8.5-curl php8.5-bcmath php8.5-redis php8.5-zip php8.5-soap php8.5-intl php8.5-common php8.5-opcache php8.5-pgsql php8.5-sqlite3 php-pear php8.5-dev g++ make
+apt install -y unzip php8.5-cli php8.5-mbstring php8.5-xml php8.5-mysql php8.5-curl php8.5-bcmath php8.5-redis php8.5-zip php8.5-soap php8.5-intl php8.5-common php8.5-pgsql php8.5-sqlite3 php-pear php8.5-dev g++ make
 
 # Set PHP 8.5 as default
 update-alternatives --set php /usr/bin/php8.5
